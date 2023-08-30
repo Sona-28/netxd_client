@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"netxd_project/netxd_customer_controllers/constants"
-	h "netxd_project/netxd_customer"
+	"github.com/Sona-28/netxd_customer_controllers/constants"
+	h "github.com/Sona-28/netxd_customer"
 
 	"google.golang.org/grpc"
 )
