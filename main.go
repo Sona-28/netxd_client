@@ -4,8 +4,9 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"github.com/Sona-28/netxd_customer_controllers/constants"
+
 	h "github.com/Sona-28/netxd_customer"
+	"github.com/Sona-28/netxd_customer_controllers/constants"
 
 	"google.golang.org/grpc"
 )
@@ -66,13 +67,23 @@ func main() {
 	}
 	defer con.Close()
 	client := h.NewCustomerServiceClient(con)
-
-	Create(client)
-
-	// Update(client)
-
-	// Read(client)
-
-	// Delete(client)
+	fmt.Println("1.Create 2.Update 3.Read 4.Delete")
+	var ch int
+	fmt.Scan(&ch)
+	if err!=nil{
+		panic(err)
+	}
+	fmt.Println(ch)
+	switch{
+	case ch==1:
+		fmt.Println("Create")
+		Create(client)
+	case ch==2:
+		Update(client)
+	case ch==3:
+		Read(client)
+	case ch==4:
+		Delete(client)
+	}
 
 }
