@@ -67,16 +67,14 @@ func main() {
 	}
 	defer con.Close()
 	client := h.NewCustomerServiceClient(con)
-	fmt.Println("1.Create 2.Update 3.Read 4.Delete")
+	fmt.Println("Enter a choice: \n 1.Create 2.Update 3.Read 4.Delete")
 	var ch int
 	fmt.Scan(&ch)
 	if err!=nil{
 		panic(err)
 	}
-	fmt.Println(ch)
 	switch{
 	case ch==1:
-		fmt.Println("Create")
 		Create(client)
 	case ch==2:
 		Update(client)
