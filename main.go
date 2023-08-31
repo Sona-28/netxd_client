@@ -62,6 +62,18 @@ func Delete(client h.CustomerServiceClient) {
 	fmt.Println("Response of Delete: ", res)
 }
 
+func Transfer(tclient tc.TransactionServiceClient) {
+	res, err := tclient.TransferMoney(context.Background(), &tc.TransactionData{
+		From:   101,
+		To:     102,
+		Amount: 1000,
+	})
+	if err != nil {
+		log.Fatal("failed,", err)
+	}
+	fmt.Println(res)
+}
+
 func main() {
 	fmt.Println("Client running on ", constants.Port)
 	con, err := grpc.Dial(constants.Port, grpc.WithInsecure())
@@ -71,7 +83,7 @@ func main() {
 	defer con.Close()
 	client := h.NewCustomerServiceClient(con)
 	tclient := tc.NewTransactionServiceClient(con)
-	fmt.Println("Enter a choice: \n 1.Create 2.Update 3.Read 4.Delete")
+	fmt.Println("Enter a choice: \n 1.Create 2.Update 3.Read 4.Delete 5.Transfer")
 	var ch int
 	fmt.Scan(&ch)
 	if err!=nil{
@@ -86,15 +98,11 @@ func main() {
 		Read(client)
 	case ch==4:
 		Delete(client)
+	case ch==5:
+		Transfer(tclient)
 	}
-	res,err := tclient.TransferMoney(context.Background(), &tc.TransactionData{
-		From:   101,
-		To:     102,
-		Amount: 1000,
-	})
-	if err!=nil{
-		log.Fatal("failed,", err)
-	}
-	fmt.Println(res)
+	
 
 }
+
+
