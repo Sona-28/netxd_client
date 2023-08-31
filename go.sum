@@ -1,7 +1,7 @@
 github.com/Sona-28/netxd_customer v0.0.0-20230830074638-bf10955ccba1 h1:NtX7FynjJB60p9YsRjtR7CnUBXP02QIOnBVSKF9ldL8=
 github.com/Sona-28/netxd_customer v0.0.0-20230830074638-bf10955ccba1/go.mod h1:080FQ2f03/aZd/Qtuz7/YfSXtj02VSD9jjCi3UbvJDk=
-github.com/Sona-28/netxd_customer_controllers v0.0.0-20230831045246-a42422557aeb h1:mTyuFjWufQvWnW7M9hf10GRSxmcbAitx5evmbHJo98Y=
-github.com/Sona-28/netxd_customer_controllers v0.0.0-20230831045246-a42422557aeb/go.mod h1:DE7iDgI9KKuhDtR0aOzqQJzRRPT2TDGPikuHCwqkKy0=
+github.com/Sona-28/netxd_customer_controllers v1.0.0 h1:tLDgXuMwrOgrLZIjNlh9Ur2EO35/qao0mrawhknROfQ=
+github.com/Sona-28/netxd_customer_controllers v1.0.0/go.mod h1:nIoty70EBGPvsfDaqNeu7AoyMtO9ZMshqsGOEVUHW94=
 github.com/golang/protobuf v1.5.0/go.mod h1:FsONVRAS9T7sI+LIUmWTfcYkHO4aIWwzhcaSAoJOfIk=
 github.com/golang/protobuf v1.5.3 h1:KhyjKVUg7Usr/dYsdSqoFveMYd5ko72D+zANwlG1mmg=
 github.com/golang/protobuf v1.5.3/go.mod h1:XVQd3VNwM+JqD3oG2Ue2ip4fOMUkwXdXDdiuN0vRsmY=

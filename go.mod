@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/Sona-28/netxd_customer v0.0.0-20230830074638-bf10955ccba1
-	github.com/Sona-28/netxd_customer_controllers v0.0.0-20230831045246-a42422557aeb
+	github.com/Sona-28/netxd_customer_controllers v1.0.0
 	google.golang.org/grpc v1.57.0
 )
 
