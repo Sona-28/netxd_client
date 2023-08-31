@@ -29,7 +29,7 @@ func Create(client h.CustomerServiceClient) {
 
 func Read(client h.CustomerServiceClient) {
 	custres, err := client.GetCustomer(context.Background(), &h.CustomerID{
-		CustomerId: 101,
+		CustomerId: 102,
 	})
 	if err != nil {
 		log.Fatal("failed ", err)
