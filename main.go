@@ -61,6 +61,7 @@ func Delete(client h.CustomerServiceClient) {
 }
 
 func main() {
+	fmt.Println("Client running on ", constants.Port)
 	con, err := grpc.Dial(constants.Port, grpc.WithInsecure())
 	if err != nil {
 		log.Fatal("failed ", err)
